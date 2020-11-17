@@ -25,9 +25,9 @@ export default ({ data }) => (
             __html: data.datoCmsWork.descriptionNode.childMarkdownRemark.html,
           }}
         />
-    
-	
-	
+        <div className="sheet__gallery">
+          <Img fluid={data.datoCmsWork.coverImage.fluid} />
+        </div>
       </div>
     </article>
   </Layout>
@@ -40,7 +40,7 @@ export const query = graphql`
         ...GatsbyDatoCmsSeoMetaTags
       }
       title
-	  videoiframeurl 
+      excerpt
       gallery {
         fluid(maxWidth: 200, imgixParams: { fm: "jpg", auto: "compress" }) {
           src
@@ -51,11 +51,12 @@ export const query = graphql`
           html
         }
       }
-	  blogurl
-	  githuburl
-	  demourl
-      title
-	  description
+      coverImage {
+        url
+        fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
+          ...GatsbyDatoCmsSizes
+        }
+      }
     }
   }
 `
