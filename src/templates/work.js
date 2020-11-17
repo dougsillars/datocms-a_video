@@ -40,7 +40,7 @@ export const query = graphql`
         ...GatsbyDatoCmsSeoMetaTags
       }
       title
-	  videoIframeURL
+	  videoiframeurl
       gallery {
         fluid(maxWidth: 200, imgixParams: { fm: "jpg", auto: "compress" }) {
           src
@@ -51,9 +51,9 @@ export const query = graphql`
           html
         }
       }
-	  blogURL
-	  githubURL
-	  demoURL
+	  blogurl
+	  githuburl
+	  demourl
       
     }
   }
