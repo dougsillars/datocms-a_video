@@ -54,7 +54,7 @@ export const query = graphql`
 	  blogURL
 	  githubURL
 	  demoURL
-      }
+      
     }
   }
 `
