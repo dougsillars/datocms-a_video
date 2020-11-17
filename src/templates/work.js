@@ -40,7 +40,7 @@ export const query = graphql`
         ...GatsbyDatoCmsSeoMetaTags
       }
       title
-      excerpt
+	  videoIframeURL
       gallery {
         fluid(maxWidth: 200, imgixParams: { fm: "jpg", auto: "compress" }) {
           src
@@ -51,11 +51,9 @@ export const query = graphql`
           html
         }
       }
-      coverImage {
-        url
-        fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
-          ...GatsbyDatoCmsSizes
-        }
+	  blogURL
+	  githubURL
+	  demoURL
       }
     }
   }
