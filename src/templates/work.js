@@ -51,11 +51,6 @@ export const query = graphql`
       excerpt
 	  blogurl
 	  githuburl
-	  githubicon{
-          fluid(maxWidth: 32, imgixParams: { auto: "compress" }) {
-            src
-          }
-	  }
 	  demourl
 	  videoiframeurl
       gallery {
