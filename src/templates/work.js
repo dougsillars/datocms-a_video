@@ -29,9 +29,9 @@ export default ({ data }) => (
 	  
 		  </div>
 		<div className="sheet__links">
-		  <a href={data.datoCmsWork.blogurl}>Blog Post</a>
-		  <a href={data.datoCmsWork.githuburl}>Github</a> 
-		  <a href={data.datoCmsWork.demourl}>{data.datoCmsWork.demourl}</a>
+		  <a href={data.datoCmsWork.blogurl}>Blog Post</a><br/>
+		  <img fluid={data.datoCmsWork.githubicon.fluid} /><a href={data.datoCmsWork.githuburl}>Github</a> <br/>
+		  <a href={data.datoCmsWork.demourl}>{data.datoCmsWork.demourl}</a><br/>
 	
 		  </div>
       </div>
@@ -49,6 +49,11 @@ export const query = graphql`
       excerpt
 	  blogurl
 	  githuburl
+	  githubicon{
+          fluid(maxWidth: 32, imgixParams: { auto: "compress" }) {
+            src
+          }
+	  }
 	  demourl
 	  videoiframeurl
       gallery {
