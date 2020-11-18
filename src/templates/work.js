@@ -19,12 +19,21 @@ export default ({ data }) => (
             ))}
           </Slider>
         </div>
+		<div className="video__section">
+			<iframe src={data.datoCmsWork.videoIframeURL}#autoplay width=600px height =340px frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+			</div>	
+			
         <div
           className="sheet__body"
           dangerouslySetInnerHTML={{
             __html: data.datoCmsWork.descriptionNode.childMarkdownRemark.html,
           }}
         />
+		<div className="sheet__links">
+		  <h2><a href={data.datoCmsWork.blogURL}>Blog Post</a> </h2>
+		  <h2><img src="https://www.datocms-assets.com/37728/1605610421-github-mark-32px.png"><a href={data.datoCmsWork.gitHubURL}>Source code on Github</a> </h2>
+		  <h2><a href={data.datoCmsWork.demoURL}>{data.datoCmsWork.demoURL}</a> </h2>
+		  </div>
         <div className="sheet__gallery">
           <Img fluid={data.datoCmsWork.coverImage.fluid} />
         </div>
