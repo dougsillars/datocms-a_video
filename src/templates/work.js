@@ -26,11 +26,11 @@ export default ({ data }) => (
           }}
         />
 		<div class__name="sheet__video">
-	  
+    <iframe src= {data.datoCmsWork.videoiframeurl} width='600px' height ='340px' frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
 		  </div>
 		<div className="sheet__links">
 		  <a href={data.datoCmsWork.blogurl}>Blog Post</a><br/>
-		  <img fluid={data.datoCmsWork.githubicon.fluid} /><a href={data.datoCmsWork.githuburl}>Github</a> <br/>
+		  <img src={data.datoCmsWork.githubicon.fluid.src} /><a href={data.datoCmsWork.githuburl}>Github</a> <br/>
 		  <a href={data.datoCmsWork.demourl}>{data.datoCmsWork.demourl}</a><br/>
 	
 		  </div>
