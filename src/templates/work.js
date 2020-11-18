@@ -27,6 +27,7 @@ export default ({ data }) => (
         />
 		<div className="sheet__links">
 		  <h2><a href={data.datoCmsWork.blogURL}>Blog Post</a> </h2>
+		  <h2><a href={data.datoCmsWork.blogurl}>Blog Post</a> </h2>
 		  </div>
         <div className="sheet__gallery">
           <Img fluid={data.datoCmsWork.coverImage.fluid} />
@@ -45,6 +46,7 @@ export const query = graphql`
       title
       excerpt
 	  blogurl
+	  blogURL
       gallery {
         fluid(maxWidth: 200, imgixParams: { fm: "jpg", auto: "compress" }) {
           src
