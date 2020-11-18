@@ -31,9 +31,9 @@ export default ({ data }) => (
         />
 
 		<div className="sheet__links">
-      <img src="https://www.datocms-assets.com/37728/1605691006-blogicon.png?auto=compress%2Cformat" /><a href={data.datoCmsWork.blogurl}>Blog Post</a><br/>
+      <img src="https://www.datocms-assets.com/37728/1605691885-blogicon2.png?auto=compress%2Cformat" /><a href={data.datoCmsWork.blogurl}>Blog Post</a><br/>
 		  <img src="https://www.datocms-assets.com/37728/1605610549-github-mark-32px.png?auto=compress%2Cformat" /><a href={data.datoCmsWork.githuburl}>Github</a> <br/>
-		  <img src="https://www.datocms-assets.com/37728/1605691011-demo2.png?auto=compress%2Cformat" /><a href={data.datoCmsWork.demourl}>{data.datoCmsWork.demourl}</a><br/>
+		  <img src="https://www.datocms-assets.com/37728/1605691879-demoicon3.png?auto=compress%2Cformat" /><a href={data.datoCmsWork.demourl}>{data.datoCmsWork.demourl}</a><br/>
 	
 		  </div>
       </div>
