@@ -50,8 +50,7 @@ export const query = graphql`
 	  blogurl
 	  githuburl
 	  demourl
-	  videoiuframeurl
-	  
+	  videoiframeurl
       gallery {
         fluid(maxWidth: 200, imgixParams: { fm: "jpg", auto: "compress" }) {
           src
