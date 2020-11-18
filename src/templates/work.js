@@ -11,7 +11,7 @@ export default ({ data }) => (
       <HelmetDatoCms seo={data.datoCmsWork.seoMetaTags} />
       <div className="sheet__inner">
         <h1 className="sheet__title">{data.datoCmsWork.title}</h1>
-        <h1 className="sheet__title"> <a href={data.datoCmsWork.demourl}>{data.datoCmsWork.demourl}</a></h1>
+        <h2 className="sheet__title"> <a href={data.datoCmsWork.demourl}>{data.datoCmsWork.demourl}</a></h2>
         <p className="sheet__lead">{data.datoCmsWork.excerpt}</p>
         <div className="sheet__slider">
           <Slider infinite={true} slidesToShow={2} arrows>
