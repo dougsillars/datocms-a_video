@@ -20,15 +20,16 @@ export default ({ data }) => (
             ))}
           </Slider>
         </div>
+        <div class__name="sheet__video">
+           <iframe src= {data.datoCmsWork.videoiframeurl} width='600px' height ='340px' frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+		    </div>
         <div
           className="sheet__body"
           dangerouslySetInnerHTML={{
             __html: data.datoCmsWork.descriptionNode.childMarkdownRemark.html,
           }}
         />
-		<div class__name="sheet__video">
-    <iframe src= {data.datoCmsWork.videoiframeurl} width='600px' height ='340px' frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
-		  </div>
+
 		<div className="sheet__links">
 		  <a href={data.datoCmsWork.blogurl}>Blog Post</a><br/>
 		  <img src={data.datoCmsWork.githubicon.fluid.src} /><a href={data.datoCmsWork.githuburl}>Github</a> <br/>
