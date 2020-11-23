@@ -6,7 +6,7 @@ export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
       <head>
-      <script
+        <script
   dangerouslySetInnerHTML={{
     __html: `
         var __nspid="isrtzw";
@@ -19,9 +19,6 @@ export default function HTML(props) {
         else if(w.attachEvent) { w.attachEvent("onload", x); }
         else { w.onload = x; }
         }(window, document));
-
-
-
         `,
   }}
 />
