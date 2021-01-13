@@ -42,8 +42,8 @@ export default ({ data }) => (
 )
 
 export const query = graphql`
-  query ZapsQuery($slug: String!) {
-    datoCmsZaps(slug: { eq: $slug }) {
+  query ZapQuery($slug: String!) {
+    datoCmsZap(slug: { eq: $slug }) {
       seoMetaTags {
         ...GatsbyDatoCmsSeoMetaTags
       }
