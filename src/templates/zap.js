@@ -47,22 +47,15 @@ export const query = graphql`
       seoMetaTags {
         ...GatsbyDatoCmsSeoMetaTags
       }
-      title
-      excerpt
-	  blogurl
-	  githuburl
-	  demourl
-	  videoiframeurl
-      gallery {
-        fluid(maxWidth: 200, imgixParams: { fm: "jpg", auto: "compress" }) {
-          src
-        }
-      }
-      descriptionNode {
-        childMarkdownRemark {
-          html
-        }
-      }
+      zap_title
+      from_logo
+      from
+      to_logo
+      to
+      description
+      template_link
+      try_it_link
+
       coverImage {
         url
         fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
