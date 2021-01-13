@@ -47,7 +47,7 @@ export const query = graphql`
       seoMetaTags {
         ...GatsbyDatoCmsSeoMetaTags
       }
-      zaptitle
+      zapTitle
       fromlogo
       from
       tologo
