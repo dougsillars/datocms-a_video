@@ -47,14 +47,14 @@ export const query = graphql`
       seoMetaTags {
         ...GatsbyDatoCmsSeoMetaTags
       }
-      zap_title
-      from_logo
+      zaptitle
+      fromlogo
       from
-      to_logo
+      tologo
       to
       description
-      template_link
-      try_it_link
+      templatelink
+      tryitlink
 
       coverImage {
         url
