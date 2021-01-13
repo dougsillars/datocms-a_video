@@ -48,9 +48,19 @@ export const query = graphql`
         ...GatsbyDatoCmsSeoMetaTags
       }
       zapTitle
-      fromLogo
+      fromLogo {
+        url
+        fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
+          ...GatsbyDatoCmsSizes
+        }
+      }
       from
-      toLogo
+      toLogo {
+        url
+        fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
+          ...GatsbyDatoCmsSizes
+        }
+      }
       to
       description
       templateLink
