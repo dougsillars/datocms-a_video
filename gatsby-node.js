@@ -28,4 +28,35 @@ exports.createPages = ({ graphql, actions }) => {
       resolve()
     })
   })
+  
+}
+
+exports.createZaps = ({ graphql, actions }) => {
+  const { createPZap } = actions
+
+  return new Promise((resolve, reject) => {
+    graphql(`
+      {
+        allDatoCmsZap {
+          edges {
+            node {
+              slug
+            }
+          }
+        }
+      }
+    `).then(result => {
+      result.data.allDatoCmsZap.edges.map(({ node: zap }) => {
+        createPage({
+          path: `zaps/${zap.slug}`,
+          component: path.resolve(`./src/templates/zap.js`),
+          context: {
+            slug: zap.slug,
+          },
+        })
+      })
+      resolve()
+    })
+  })
+  
 }
