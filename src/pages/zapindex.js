@@ -11,10 +11,10 @@ const IndexPage = ({ data }) => (
 
   <Layout>
     <Masonry className="showcase">
-      {data.allDatoCmsWork.edges.map(({ node: work }) => (
+      {data.allDatoCmsZap.edges.map(({ node: zap }) => (
         <div key={zap.id} className="showcase__item">
           <figure className="card">
-            <Link to={`/works/${zap.slug}`} className="card__image">
+            <Link to={`/zaps/${zap.slug}`} className="card__image">
               <Img fluid={zap.coverImage.fluid} />
             </Link>
             <figcaption className="card__caption">
