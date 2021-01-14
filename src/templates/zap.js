@@ -29,8 +29,8 @@ export default ({ data }) => (
         />
 
         <div className="sheet__links">
-          <a href={data.datoCmsWork.templateLink}>See the Zapier Template page</a><br/>
-		      <a href={data.datoCmsWork.tryItlink}>Try it!</a> <br/>
+          <a href={data.datoCmsZap.templateLink}>See the Zapier Template page</a><br/>
+		      <a href={data.datoCmsZap.tryItlink}>Try it!</a> <br/>
 		      
 		    </div>
       </div>
