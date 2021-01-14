@@ -37,7 +37,7 @@ exports.createPages = ({ graphql, actions }) => {
           path: `zaps/${zaps.slug}`,
           component: path.resolve(`./src/templates/zap.js`),
           context: {
-            slug: zap.slug,
+            slug: zaps.slug,
           },
         })
       })
