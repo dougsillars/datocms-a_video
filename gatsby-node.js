@@ -14,6 +14,13 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
+        allDatoCmsZap {
+          edges {
+            node {
+              slug
+            }
+          }
+        }
       }
     `).then(result => {
       result.data.allDatoCmsWork.edges.map(({ node: work }) => {
@@ -25,30 +32,9 @@ exports.createPages = ({ graphql, actions }) => {
           },
         })
       })
-      resolve()
-    })
-  })
-  
-}
-
-exports.createZaps = ({ graphql, actions }) => {
-  const { createPZap } = actions
-
-  return new Promise((resolve, reject) => {
-    graphql(`
-      {
-        allDatoCmsZap {
-          edges {
-            node {
-              slug
-            }
-          }
-        }
-      }
-    `).then(result => {
-      result.data.allDatoCmsZap.edges.map(({ node: zap }) => {
+      result.data.allDatoCmsZap.edges.map(({ node: zaps }) => {
         createPage({
-          path: `zaps/${zap.slug}`,
+          path: `zaps/${zaps.slug}`,
           component: path.resolve(`./src/templates/zap.js`),
           context: {
             slug: zap.slug,
@@ -60,3 +46,5 @@ exports.createZaps = ({ graphql, actions }) => {
   })
   
 }
+
+
