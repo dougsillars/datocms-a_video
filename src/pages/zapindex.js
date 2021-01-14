@@ -38,7 +38,7 @@ export default IndexPage
 
 export const query = graphql`
   query zapQuery {
-    allDatoCmsZap() {
+    allDatoCmsZap {
       edges {
         node {
           id
