@@ -56,7 +56,11 @@ export const query = graphql`
         }
       }
       to
-      description
+      descriptionNode {
+        childMarkdownRemark {
+          html
+        }
+      }
       templateLink
       tryItLink
 
