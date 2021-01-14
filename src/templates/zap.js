@@ -14,13 +14,13 @@ export default ({ data }) => (
         <h2 className="sheet__title"> <a href={data.datoCmsZap.demourl}>{data.datoCmsZap.demourl}</a></h2>
         <p className="sheet__lead">{data.datoCmsZap.excerpt}</p>
         <div className="sheet__from">
-        
+            {data.datoCmsZap.from}
 
         </div>
         <div className="sheet__to">
-
+            {data.datoCmsZap.to}
           
-</div>
+        </div>
         <div
           className="sheet__body"
           dangerouslySetInnerHTML={{
@@ -28,9 +28,11 @@ export default ({ data }) => (
           }}
         />
 
-		<div className="sheet__links">
-      
-		  </div>
+        <div className="sheet__links">
+          <a href={data.datoCmsWork.templateLink}>See the Zapier Template page</a><br/>
+		      <a href={data.datoCmsWork.tryItlink}>Try it!</a> <br/>
+		      
+		    </div>
       </div>
     </article>
   </Layout>
