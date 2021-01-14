@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => (
             </Link>
             <figcaption className="card__caption">
               <h6 className="card__title">
-                <Link to={`/zaps/${zap.slug}`}>{zap.zapTitle}</Link>
+                <Link to={`/zaps/${zap.slug}`}>{zap.itle}</Link>
               </h6>
               <div className="card__description">
                 <p>{zap.excerpt}</p>
