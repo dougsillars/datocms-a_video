@@ -19,6 +19,7 @@ export default ({ data }) => (
 
         </div>
         <div className="sheet__to">
+          <Img fluid={data.datoCmsZap.toLogo.fluid} />
             {data.datoCmsZap.to}
           
         </div>
@@ -47,14 +48,14 @@ export const query = graphql`
       }
       zapTitle
       fromLogo {
-        fluid(maxWidth: 450, imgixParams: { fm: "jpg", auto: "compress" }) {
+        fluid(maxWidth: 150, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsSizes
         }
       }
       from
       toLogo {
         url
-        fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
+        fluid(maxWidth: 150, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsSizes
         }
       }
