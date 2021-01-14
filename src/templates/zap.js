@@ -13,16 +13,14 @@ export default ({ data }) => (
         <h1 className="sheet__title">{data.datoCmsZap.title}</h1>
         <h2 className="sheet__title"> <a href={data.datoCmsZap.demourl}>{data.datoCmsZap.demourl}</a></h2>
         <p className="sheet__lead">{data.datoCmsZap.excerpt}</p>
-        <div className="sheet__slider">
-          <Slider infinite={true} slidesToShow={2} arrows>
-            {data.datoCmsZap.gallery.map(({ fluid }) => (
-              <img alt={data.datoCmsZap.title} key={fluid.src} src={fluid.src} />
-            ))}
-          </Slider>
+        <div className="sheet__from">
+        <Img fluid={data.datoCmsZap.from_logo.fluid} />
+
         </div>
-        <div class__name="sheet__video">
-           <iframe src= {data.datoCmsZap.videoiframeurl} width='600px' height ='340px' frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
-		    </div>
+        <div className="sheet__to">
+
+          
+</div>
         <div
           className="sheet__body"
           dangerouslySetInnerHTML={{
@@ -31,10 +29,7 @@ export default ({ data }) => (
         />
 
 		<div className="sheet__links">
-      <img src="https://www.datocms-assets.com/37728/1605691885-blogicon2.png?auto=compress%2Cformat" /><a href={data.datoCmsZap.blogurl}>Blog Post</a><br/>
-		  <img src="https://www.datocms-assets.com/37728/1605610549-github-mark-32px.png?auto=compress%2Cformat" /><a href={data.datoCmsZap.githuburl}>Github</a> <br/>
-		  <img src="https://www.datocms-assets.com/37728/1605691879-demoicon3.png?auto=compress%2Cformat" /><a href={data.datoCmsZap.demourl}>{data.datoCmsZap.demourl}</a><br/>
-	
+      
 		  </div>
       </div>
     </article>
