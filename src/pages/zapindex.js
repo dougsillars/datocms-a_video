@@ -42,7 +42,7 @@ export const query = graphql`
       edges {
         node {
           id
-          ZapTitle
+          zapTitle
           slug
           excerpt
           coverImage {
