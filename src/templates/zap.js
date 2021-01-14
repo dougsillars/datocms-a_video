@@ -14,7 +14,7 @@ export default ({ data }) => (
         <h2 className="sheet__title"> <a href={data.datoCmsZap.demourl}>{data.datoCmsZap.demourl}</a></h2>
         <p className="sheet__lead">{data.datoCmsZap.excerpt}</p>
         <div className="sheet__from">
-          <Img fluid={data.datoCmsZap.fromLogo.fluid} />
+          <Img fluid={data.datoCmsZap.fromLogo.fluid} width="150"/>
             {data.datoCmsZap.from}
 
         </div>
@@ -48,7 +48,7 @@ export const query = graphql`
       }
       zapTitle
       fromLogo {
-        fluid(maxWidth: 500, imgixParams: { fm: "jpg", auto: "compress" width: "200" }) {
+        fluid(maxWidth: 500, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsSizes
         }
       }
