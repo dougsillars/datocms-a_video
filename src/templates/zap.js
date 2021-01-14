@@ -48,14 +48,14 @@ export const query = graphql`
       }
       zapTitle
       fromLogo {
-        fluid(maxWidth: 150, imgixParams: { fm: "jpg", auto: "compress" }) {
+        fluid(maxWidth: 500, imgixParams: { fm: "jpg", auto: "compress" width: "200" }) {
           ...GatsbyDatoCmsSizes
         }
       }
       from
       toLogo {
         url
-        fluid(maxWidth: 150, imgixParams: { fm: "jpg", auto: "compress" }) {
+        fluid(maxWidth: 500, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsSizes
         }
       }
