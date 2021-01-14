@@ -37,8 +37,8 @@ const IndexPage = ({ data }) => (
 export default IndexPage
 
 export const query = graphql`
-  query zapQuery {
-    allDatoCmsZap {
+  query zapIndexQuery {
+    allDatoCmsZaps(sort: { fields: [position], order: ASC }) {
       edges {
         node {
           id
