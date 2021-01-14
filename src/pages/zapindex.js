@@ -12,17 +12,17 @@ const IndexPage = ({ data }) => (
   <Layout>
     <Masonry className="showcase">
       {data.allDatoCmsWork.edges.map(({ node: work }) => (
-        <div key={work.id} className="showcase__item">
+        <div key={zap.id} className="showcase__item">
           <figure className="card">
-            <Link to={`/works/${work.slug}`} className="card__image">
-              <Img fluid={work.coverImage.fluid} />
+            <Link to={`/works/${zap.slug}`} className="card__image">
+              <Img fluid={zap.coverImage.fluid} />
             </Link>
             <figcaption className="card__caption">
               <h6 className="card__title">
-                <Link to={`/works/${work.slug}`}>{work.title}</Link>
+                <Link to={`/zaps/${zap.slug}`}>{zap.zapTitle}</Link>
               </h6>
               <div className="card__description">
-                <p>{work.excerpt}</p>
+                <p>{zap.excerpt}</p>
               </div>
             </figcaption>
           </figure>
@@ -38,11 +38,11 @@ export default IndexPage
 
 export const query = graphql`
   query zapQuery {
-    allDatoCmsWork(sort: { fields: [position], order: ASC }) {
+    allDatoCmsZap(sort: { fields: [position], order: ASC }) {
       edges {
         node {
           id
-          title
+          ZapTitle
           slug
           excerpt
           coverImage {
