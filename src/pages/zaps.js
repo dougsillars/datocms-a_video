@@ -14,12 +14,12 @@ const IndexPage = ({ data }) => (
       {data.allDatoCmsZap.edges.map(({ node: zap }) => (
         <div key={zap.id} className="showcase__item">
           <figure className="card">
-            <Link to={`/zapindex/${zap.slug}`} className="card__image">
+            <Link to={`/zaps/${zap.slug}`} className="card__image">
               <Img fluid={zap.coverImage.fluid} />
             </Link>
             <figcaption className="card__caption">
               <h6 className="card__title">
-                <Link to={`/zapindex/${zap.slug}`}>{zap.zapTitle}</Link>
+                <Link to={`/zaps/${zap.slug}`}>{zap.zapTitle}</Link>
               </h6>
               <div className="card__description">
                 <p>{zap.excerpt}</p>
