@@ -19,7 +19,7 @@ export default ({ data }) => (
 
         </div>
         <div className="sheet__to">
-          <Img fluid={data.datoCmsZap.toLogo.fluid} />
+          <img src={data.datoCmsZap.toLogo.url} width="150" />
             {data.datoCmsZap.to}
           
         </div>
