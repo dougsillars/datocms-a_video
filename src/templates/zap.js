@@ -14,8 +14,9 @@ export default ({ data }) => (
         <h2 className="sheet__title"> <a href={data.datoCmsZap.demourl}>{data.datoCmsZap.demourl}</a></h2>
         <p className="sheet__lead">{data.datoCmsZap.excerpt}</p>
         <div className="sheet__from">
-          
-            <img src={data.datoCmsZap.fromLogo.url} width="150"/>
+          <div className="sheet__from_logo">
+              <img src={data.datoCmsZap.fromLogo.url} width="150"/>
+          </div>
           <div className="sheet__from_text">
             {data.datoCmsZap.from}
           </div>  
