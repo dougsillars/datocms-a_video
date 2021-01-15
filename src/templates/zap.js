@@ -10,7 +10,7 @@ export default ({ data }) => (
     <article className="sheet">
       <HelmetDatoCms seo={data.datoCmsZap.seoMetaTags} />
       <div className="sheet__inner">
-        <h1 className="sheet__title">{data.datoCmsZap.title}</h1>
+        <h1 className="sheet__title">{data.datoCmsZap.zapTitle}</h1>
         <h2 className="sheet__title"> <a href={data.datoCmsZap.demourl}>{data.datoCmsZap.demourl}</a></h2>
         <p className="sheet__lead">{data.datoCmsZap.excerpt}</p>
         
