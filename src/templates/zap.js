@@ -15,12 +15,16 @@ export default ({ data }) => (
         <p className="sheet__lead">{data.datoCmsZap.excerpt}</p>
         <div className="sheet__from">
           <img src={data.datoCmsZap.fromLogo.url} width="150"/>
+          <div className="sheet__from_text">
             {data.datoCmsZap.from}
-
+          </div>  
         </div>
         <div className="sheet__to">
           <img src={data.datoCmsZap.toLogo.url} width="150" />
+          <div className="sheet__to_text">
             {data.datoCmsZap.to}
+          </div>        
+
           
         </div>
         <div
