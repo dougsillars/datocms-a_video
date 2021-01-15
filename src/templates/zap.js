@@ -14,16 +14,19 @@ export default ({ data }) => (
         <h2 className="sheet__title"> <a href={data.datoCmsZap.demourl}>{data.datoCmsZap.demourl}</a></h2>
         <p className="sheet__lead">{data.datoCmsZap.excerpt}</p>
         <div className="sheet__from">
-          <img src={data.datoCmsZap.fromLogo.url} width="150"/>
+          
+            <img src={data.datoCmsZap.fromLogo.url} width="150"/>
           <div className="sheet__from_text">
             {data.datoCmsZap.from}
           </div>  
         </div>
         <div className="sheet__to">
-          <img src={data.datoCmsZap.toLogo.url} width="150" />
-          <div className="sheet__to_text">
-            {data.datoCmsZap.to}
-          </div>        
+            <div className="sheet__to_logo">
+              <img src={data.datoCmsZap.toLogo.url} width="150" />
+            </div>
+            <div className="sheet__to_text">
+                {data.datoCmsZap.to}
+            </div>        
 
           
         </div>
