@@ -35,8 +35,9 @@ export default ({ data }) => (
 
           
         </div>
+        <br/><br/>
         <div
-          className="sheet__body"
+          className="sheet__zapbody"
           dangerouslySetInnerHTML={{
             __html: data.datoCmsZap.descriptionNode.childMarkdownRemark.html,
           }}
