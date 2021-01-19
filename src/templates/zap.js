@@ -23,7 +23,7 @@ export default ({ data }) => (
             {data.datoCmsZap.from}
           </div>  
         </div>
-        <br/><br/>
+        
 
         <div className="sheet__tofrom">
             <div className="sheet__tofrom_logo">
